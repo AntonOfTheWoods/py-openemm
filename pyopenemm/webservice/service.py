@@ -101,7 +101,7 @@ class OpenEMM(object):
         media_type = 0 # Email, would be 1 for SMS but this is not available for the OSS version
         
         try :
-        customer_id = self.client.service.setSubscriberBinding(self.username,self.password,subscriber_id, mailinglist_id, media_type, status, binding_type, remark, exit_mailing_id)
+            customer_id = self.client.service.setSubscriberBinding(self.username,self.password,subscriber_id, mailinglist_id, media_type, status, binding_type, remark, exit_mailing_id)
         except Exception, e:
             # TODO : logger needs to be used
             customer_id = 0
